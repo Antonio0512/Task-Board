@@ -1,11 +1,45 @@
-Terraform in Azure. 
+# Azure Terraform Deployment Guide
 
-This app is provided by Softuni.
+This README provides instructions for deploying the Softuni app in Azure using Terraform.
 
-To upload the app in azure using terraform all you have to do is: 
-1: Git clone <the link of the repository> <location> 
-2. Open Terminal and go to where you cloned the project.
-3. Type terraform init. 
-4. You can update the 4 files to match your needs.  
-5. You can format and validate the files by typing terraform fmt and terraform validate. 
-6. Type terraform apply and you are ready to deploy the app. 
+## Prerequisites
+Before proceeding with the deployment, make sure you have the following:
+
+- Git installed on your machine
+- Azure subscription and appropriate permissions
+- Terraform installed on your machine
+
+## Deployment Steps
+
+1. Clone the repository by running the following command in your terminal:
+```bash
+https://github.com/Antonio0512/Task-Board.git
+```
+
+2. Go to the cloned location:
+```bash
+cd Task-Board
+```
+
+3. 3. Initialize Terraform in the project directory by running the following command:
+```bash
+terraform init
+```
+
+4. Update the necessary configuration files to match your deployment requirements. There are four files that can be customized.
+
+5. To ensure proper formatting and validate the configuration files, run the following commands:
+```bash
+terraform fmt
+terraform validate
+```
+
+
+6. Deploy the app to Azure by running the following command:
+
+You have to create the values.tfvars file before the apply command!
+```bash
+terraform apply -var-file="values.tfvars"
+```
+
+That is all!
